@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Navbar, Welcome, Footer, services, Transactions } from "./components/index";
+import { Navbar, Welcome, Footer, Services, Transactions } from "./components/index";
 
 const App = () => {
   const [count, setCount] = useState(0);
