@@ -22,7 +22,7 @@ const ServiceCard = ({ color, title, icon, subtitle }) => (
 
 const Services = () => {
   const renderServiceCards = () => (
-    serviceCards.map(card => <ServiceCard key={card.key} color={card.color} title={card.title} icon={card.icon} subtitle={card.subtitle} />)
+    serviceCards.map(card => <ServiceCard key={card.id} color={card.color} title={card.title} icon={card.icon} subtitle={card.subtitle} />)
   );
   
   return (
