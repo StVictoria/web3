@@ -4,8 +4,8 @@ import { RiHeart2Fill } from "react-icons/ri";
 
 const serviceCards = [
   { id: 1, color: "bg-[#2952e3]", title: "Security Guaranteed", icon: <BsShieldFillCheck fontSize={21} className="text-white" />, subtitle: "Security is guaranted. We always maintain privacy and mainting the quality of our products." },
-  { id: 1, color: "bg-[#8945f8]", title: "Best exchange rates", icon: <BiSearchAlt fontSize={21} className="text-white" />, subtitle: "Security is guaranted. We always maintain privacy and mainting the quality of our products." },
-  { id: 1, color: "bg-[#f84550]", title: "Fastest transactions", icon: <RiHeart2Fill fontSize={21} className="text-white" />, subtitle: "Security is guaranted. We always maintain privacy and mainting the quality of our products." },
+  { id: 2, color: "bg-[#8945f8]", title: "Best exchange rates", icon: <BiSearchAlt fontSize={21} className="text-white" />, subtitle: "Security is guaranted. We always maintain privacy and mainting the quality of our products." },
+  { id: 3, color: "bg-[#f84550]", title: "Fastest transactions", icon: <RiHeart2Fill fontSize={21} className="text-white" />, subtitle: "Security is guaranted. We always maintain privacy and mainting the quality of our products." },
 ];
 
 const ServiceCard = ({ color, title, icon, subtitle }) => (

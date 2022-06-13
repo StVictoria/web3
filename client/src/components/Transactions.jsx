@@ -16,27 +16,25 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
           <p className="text-white text-base">From: {shortenAddress(addressFrom)}</p>
         </a>
         <a href={`https://rinkeby.etherscan.io/address/${addressTo}`} target="_blank" rel="noopener noreferrer">
-          <p className="text-white text-base">To: {shortenAddress(addressTo)}</p>
+          <p className="text-white text-base">To: {addressTo && shortenAddress(addressTo)}</p>
         </a>
         <p className="text-white text-base">Amount: {amount} ETH</p>
         {message && (
           <>
-          <br />
-          <p className="text-white text-base">Message: {message}</p>
+            <br />
+            <p className="text-white text-base">Message: {message}</p>
           </>
         )}
-        <div className="bg-black p-3 px-5 w-max rounded-3xl -mt-5 shadow-2xl">
-          <p className="text-[#37c7da] font-bold">{timestamp}</p>
-        </div>
+        <p className="text-[#37c7da] font-bold mt-5 w-max">{timestamp}</p>
       </div>
     </div>
   </div>
 );
 
 const Transactions = () => {
-  const { currentAccount } = useContext(TransactionContext);
+  const { currentAccount, transactions } = useContext(TransactionContext);
 
-  const renderDummyData = () => dummyData.reverse().map((transaction) => (
+  const renderTransactions = () => transactions.reverse().map((transaction) => (
     <TransactionCard key={transaction.id} {...transaction} />
   ));
 
@@ -50,7 +48,7 @@ const Transactions = () => {
         )}
 
         <div className="flex flex-wrap justify-center items-center mt-10">
-          {renderDummyData()}
+          {renderTransactions()}
         </div>
       </div>
     </div>

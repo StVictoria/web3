@@ -28,7 +28,7 @@ const Input = ({ placeholder, name, type, value, onChange }) => (
 );
 
 const Welcome = () => {
-  const { connectWallet, currentAccount, formData, setFormData, handleChange, sendTransaction } = useContext(TransactionContext);
+  const { connectWallet, currentAccount, formData, isLoading, handleChange, sendTransaction } = useContext(TransactionContext);
 
   const handleSubmit = (e) => { 
     e.preventDefault();
@@ -98,7 +98,7 @@ const Welcome = () => {
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             {renderInputs()}
             <div className="h-[1px] w-full bg-gray-400 my-2" />
-            {false ? (
+            {isLoading ? (
               <Loader />
             ) : (
               <button
