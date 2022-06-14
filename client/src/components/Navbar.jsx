@@ -37,7 +37,7 @@ const Navbar = () => {
           Login
         </li>
       </ul>
-      <div className="flex relative">
+      <nav className="flex relative">
         {isMenuOpen
           ? <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={handleToggleMenu} />
           : <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={handleToggleMenu} />
@@ -53,7 +53,7 @@ const Navbar = () => {
             {renderNavLinks("my-2 text-lg")}
           </ul>
         )}
-      </div>
+      </nav>
     </nav>
   );
 };

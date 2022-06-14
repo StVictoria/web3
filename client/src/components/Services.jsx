@@ -9,7 +9,7 @@ const serviceCards = [
 ];
 
 const ServiceCard = ({ color, title, icon, subtitle }) => (
-  <div className="flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
+  <li className="flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
     <div className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}>
       {icon}
     </div>
@@ -17,7 +17,7 @@ const ServiceCard = ({ color, title, icon, subtitle }) => (
       <h3 className="mt-2 text-white text-lg">{title}</h3>
       <p className="mt-2 text-white text-sm md:w-9/12">{subtitle}</p>
     </div>
-  </div>
+  </li>
 );
 
 const Services = () => {
@@ -36,9 +36,9 @@ const Services = () => {
           </h1>
         </div>
       </div>
-      <div className="flex-1 flex flex-col justify-start items-center">
+      <ul className="flex-1 flex flex-col justify-start items-center">
         {renderServiceCards()}
-      </div>
+      </ul>
     </section>
   )
 };

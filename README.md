@@ -3,7 +3,7 @@
 Test networks often get deprecated and these steps should work for any new network.
 
 >I was trying to migrate from ropsten to rinkeby.
->Hope it will help those who faced the same problem while watching [this tutorial](https://www.youtube.com/watch?v=Wn_Kb3MR_cU&t=5622s)
+>Hope it will help those who faced the same problem
 
   
 

@@ -75,7 +75,7 @@ const Welcome = () => {
           </div>
         </div>
 
-        <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
+        <section className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
           <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
@@ -95,7 +95,7 @@ const Welcome = () => {
             </div>
           </div>
 
-          <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+          <form className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             {renderInputs()}
             <div className="h-[1px] w-full bg-gray-400 my-2" />
             {isLoading ? (
@@ -109,9 +109,9 @@ const Welcome = () => {
                 Send Now
               </button>
             )}
-          </div>
+          </form>
 
-        </div>
+        </section>
       </div>
     </section>
   );
